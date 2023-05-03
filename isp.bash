@@ -11,7 +11,7 @@ read var_ip
 echo "auto eth1 \niface eth1 inet static \naddress $var_ip \nnetmask 255.255.255.0 " >> /etc/network/interfaces
 echo "IP-address $var_ip succesfully added to /etc/network/interfaces"
 systemctl restart networking
-Настраиваем прокси через Apache
+# Настраиваем прокси через Apache
 a2enmod proxy proxy_http
 cat > /etc/apache2/sites-available/koni.demo.wsr.conf <<OL
 <VirtualHost *:80>
